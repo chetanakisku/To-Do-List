@@ -1,0 +1,86 @@
+body {
+    width: 50%;
+    margin: 0;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+.add-container {
+    background-color: lightcoral;
+    padding: 20px;
+    text-align: center;
+}
+
+.add-input {
+    width: 60%;
+    height: 41px;
+    padding: 5px;
+    border: 2px solid red;
+    font-family: Helvetica, sans-serif;
+    font-size: 16px;
+}
+
+.add-btn {
+    width: 25%;
+    padding: 10px 20px 10px 20px;
+    background-color: lightgreen;
+    position: relative;
+    left: -4px;
+    border: 2px solid green;
+    font-weight: bold;
+}
+
+ul {
+    position: relative;
+    top: -16px;
+    padding: 0;
+    border: 2px solid grey;
+    cursor: pointer;
+}
+
+ul li:nth-child(odd) {
+    background: #f9f9f9;
+}
+
+.list-item {
+    padding: 10px 10px 10px 40px;
+    list-style: none;
+    font-size: 16px;
+}
+
+.list-item:hover {
+    background: #ddd;
+}
+
+.close-btn {
+    position: absolute;
+    background: red;
+    right: 10px;
+}
+
+
+/* When clicked on, add a background color and strike out text */
+
+ul li.checked {
+    background: #888;
+    color: #fff;
+    text-decoration: line-through;
+}
+
+
+/* Add a "checked" mark when clicked on */
+
+ul li.checked::before {
+    content: '';
+    position: absolute;
+    border-color: #fff;
+    border-style: solid;
+    border-width: 0 2px 2px 0;
+    top: 10px;
+    left: 16px;
+    transform: rotate(45deg);
+    height: 15px;
+    width: 7px;
+}
